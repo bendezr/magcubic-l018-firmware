@@ -1,0 +1,44 @@
+# Large binary firmware dumps and images (>100MB limit on GitHub)
+*.img
+*.raw
+*.bin
+*.dump
+*.tar
+*.gz
+*.zip
+*.7z
+*.rar
+
+# Android APKs and extracted builds
+*.apk
+*.idsig
+*.dex
+*.jar
+
+# Backups and temporary dumps
+backup_*
+extracted_*
+*_decoded
+*_dump
+*_decompiled
+scratchextracted/
+temp_*
+scratch/
+PhoenixSuit/
+jadx/
+
+# Python cache & logs
+__pycache__/
+*.pyc
+*.log
+
+# Sensitive keys and signatures
+*.key
+*.p12
+*.pk8
+*.pem
+*.rsa
+
+# OS files
+Thumbs.db
+.DS_Store
