@@ -34,7 +34,12 @@
 5. Using a thin tool (e.g., a toothpick or paperclip), **press and hold the RESET button** inside the pinhole located next to the USB port.
 6. Press the **Power button** on top of the projector casing, then release the **RESET button**.
 7. The projector will enter Allwinner download mode (**FEL Mode**).
-8. Select the flashing options in OpenixSuit according to standard presets and click **Start Flash**.
+8. Configure the flashing options in OpenixSuit as shown in the screenshot below and click **Start Flash**.
+
+<p align="center">
+  <img src="assets/openixsuit.jpg" alt="OpenixSuit Configuration" width="700">
+</p>
+
 9. **Do not disconnect the USB cable or power supply** until the application displays the 100% success message.
 
 > [!NOTE]  

@@ -39,6 +39,22 @@ __pycache__/
 *.pem
 *.rsa
 
-# OS files
-Thumbs.db
-.DS_Store
+# Loose images in root (keep assets)
+/*.png
+/*.jpg
+/*.JPG
+/*.html
+/*.txt
+/*.xml
+/*.bat
+/*.sh
+/*.py
+/*.db
+/*.so
+/*.deb
+/*.ko
+/*.dtb
+!/assets/
+!/assets/*
+!/README.md
+!/.gitignore
