@@ -11,7 +11,7 @@
 | LuminaOS Desktop Overhaul | PRHub Control Center |
 | :---: | :---: |
 | ![LuminaOS Launcher](assets/luminaos_launcher.jpg) | ![PRHub Dashboard](assets/prhub_dashboard.jpg) |
-| *Streamlined desktop with SmartTube, Nova, LocalSend & Aurora Store* | *Proprietary system hub: live RAM meter, motorized optics, HDMI & cache flush* |
+| *Streamlined desktop with SmartTube, Nova, LocalSend & Aurora Store* | *Proprietary system hub v0.5: 8-tile grid, Katniss toggle for maximum free RAM, telemetry HUD, live RAM meter, motorized optics & HDMI switch* |
 
 ---
 
@@ -98,14 +98,17 @@
 
 ---
 
-### 3. 🎛️ Proprietary System Controller: PRHub (`com.projector.prhub`, UID 1000)
+### 3. 🎛️ Proprietary System Controller: PRHub v0.5 (`com.projector.prhub`, UID 1000)
 * **Real-Time RAM Monitor:** Live kernel-level reading from `/proc/meminfo` displayed in the header — shows real memory reserves (~300 MB free vs stock 20–30 MB).
-* **Tile 1 (Projector Settings):** Digital zoom, orientation flipping (ceiling/mirror), and electronic focus adjustment.
-* **Tile 2 (Picture Mode):** Direct access to brightness, contrast, saturation, and image profiles.
-* **Tile 3 (HDMI Source):** Instant hardware video input switching to HDMI / AV.
-* **Tile 4 (Clean & Exit):** 1-Click background task termination and RAM cache flush (+80–120 MB free memory).
-* **Tile 5 (Android Settings):** Direct shortcut to Android TV Wi-Fi and Bluetooth configuration menus.
-* **Tile 6 (Factory Menu):** Direct entry to the Allwinner engineer service menu.
+* **Expanded 8-Tile Symmetrical Grid (4×2) [NEW in v0.5]:**
+  - **Tile 1 (Projector Settings):** Digital zoom, orientation flipping (ceiling/mirror), and electronic focus adjustment.
+  - **Tile 2 (Picture Mode):** Direct access to brightness, contrast, saturation, and image profiles.
+  - **Tile 3 (HDMI Source):** Instant hardware video input switching to HDMI / AV.
+  - **Tile 4 (Factory Menu):** Direct entry to the Allwinner engineer service menu.
+  - **Tile 5 (Clean & Exit):** 1-Click background task termination and RAM cache flush (+80–120 MB free memory).
+  - **Tile 6 (Android Settings):** Direct shortcut to Android TV Wi-Fi and Bluetooth configuration menus.
+  - **Tile 7 (Voice & Memory / Google Assistant Toggle) [NEW]:** 1-Click toggle to completely disable or enable Google Assistant (`com.google.android.katniss`). **Disabling Katniss shuts down background microphone listeners and frees up an additional ~80–100 MB of permanent RAM**, completely eliminating remote input lag and maximizing memory reserve for high-bitrate streaming!
+  - **Tile 8 (Telemetry HUD / Mini Dock) [NEW]:** Toggles a live translucent telemetry status bar overlay in the top-right corner displaying real-time CPU temperature, CPU clock frequency, available free RAM, and LED status.
 
 ---
 
