@@ -8,10 +8,20 @@
 
 ## 📸 Screenshots
 
-| LuminaOS Desktop Overhaul | PRHub Control Center |
-| :---: | :---: |
-| ![LuminaOS Launcher](assets/luminaos_launcher.jpg) | ![PRHub Dashboard](assets/prhub_dashboard_v5.jpg) |
-| *Streamlined desktop with SmartTube, Nova, LocalSend & Aurora Store* | *Proprietary system hub v0.5: 8-tile grid, Katniss toggle for maximum free RAM, telemetry HUD, live RAM meter, motorized optics & HDMI switch* |
+<table>
+  <tr>
+    <th width="50%" align="center">LuminaOS Desktop Overhaul</th>
+    <th width="50%" align="center">PRHub Control Center</th>
+  </tr>
+  <tr>
+    <td valign="top"><img src="assets/luminaos_launcher.jpg" width="100%" alt="LuminaOS Launcher"></td>
+    <td valign="top"><img src="assets/prhub_dashboard_v5.jpg" width="100%" alt="PRHub Dashboard"></td>
+  </tr>
+  <tr>
+    <td align="center"><em>Streamlined desktop with SmartTube, Nova, LocalSend & Aurora Store</em></td>
+    <td align="center"><em>Proprietary system hub v0.5: 8-tile grid, Katniss toggle for extra RAM & telemetry HUD</em></td>
+  </tr>
+</table>
 
 ---
 
