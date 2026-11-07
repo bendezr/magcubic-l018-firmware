@@ -58,3 +58,4 @@ __pycache__/
 !/assets/*
 !/README.md
 !/.gitignore
+!/prhub.apk

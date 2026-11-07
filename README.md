@@ -17,12 +17,20 @@
 
 ## 📥 Download Links
 
-| Image Variant | Description | Direct Link |
+| Item | Description | Direct Link |
 | :--- | :--- | :--- |
+| **PRHub v0.5 APK** | **NEW:** Standalone system controller APK (disables Katniss, enhanced HUD, frees up extra RAM) | **[Download prhub.apk](prhub.apk)** |
 | **Firmware with Root** | Cleaned stock system with pre-configured Root access | [Download from MEGA](https://mega.nz/folder/yYtCTaKR#1SRV57eHmnI-LdXAofpewQ) |
 | **Firmware with Root + Optimizations** | **Recommended:** Complete debloat, PRHub, DSP audio, picture calibration & kernel boost | [Download from MEGA](https://mega.nz/folder/dMYElIqY#NARE4DKCwyzCbLF3I-F0Ew) |
 | **Drivers**| **drivers.zip** Contains the official Amlogic USB burning mode drivers. Make sure to install them if your PC does not recognize the device when putting it into flashing mode. | [Download from MEGA](https://mega.nz/folder/dMYElIqY#NARE4DKCwyzCbLF3I-F0Ew) |
 | **Flashing Utility** | OpenixSuit (Modern open-source flashing tool for Allwinner SoCs) | [OpenixSuit GitHub](https://github.com/YuzukiTsuru/OpenixSuit) |
+
+> [!TIP]
+> **New PRHub v0.5 APK is now bundled directly in this repo!**  
+> If you already have stock or custom firmware installed, you can simply download **[`prhub.apk`](prhub.apk)**, copy it to a USB flash drive, and install it with the built-in file manager — **no PC, no root, and no ADB required** (pre-signed with Allwinner system UID 1000).  
+> **Key v0.5 features:**  
+> - **Katniss (Google Assistant) Toggle:** Turn off Katniss to shut down background mic listeners and **free up an additional ~80–100 MB of RAM** for smoother 1080p playback.  
+> - **Enhanced Telemetry HUD:** Live overlay in the top-right corner displaying real-time CPU temperature, clock frequency, RAM, and LED status.
 
 ---
 
