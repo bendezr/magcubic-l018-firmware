@@ -50,7 +50,7 @@
   <img src="assets/openixsuit.jpg" alt="OpenixSuit Configuration" width="700">
 </p>
 
-9. **Do not disconnect the USB cable or power supply** until the application displays the 100% success message.
+10. **Do not disconnect the USB cable or power supply** until the application displays the 100% success message.
 
 > [!NOTE]  
 > The very first boot after flashing takes noticeably longer than usual due to initial application unpacking and permission setup.
