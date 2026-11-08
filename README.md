@@ -31,7 +31,7 @@
 | :--- | :--- | :--- |
 | **PRHub v0.5 APK** | **NEW:** Standalone system controller APK (disables Katniss, enhanced HUD, frees up extra RAM) | **[Download prhub.apk](prhub.apk)** |
 | **Firmware with Root** | Cleaned stock system with pre-configured Root access | [Download from MEGA](https://mega.nz/folder/yYtCTaKR#1SRV57eHmnI-LdXAofpewQ) |
-| **Firmware with Root + Optimizations** | **Recommended:** Complete debloat, PRHub, DSP audio, picture calibration & kernel boost | [Download from MEGA](https://mega.nz/folder/dMYElIqY#NARE4DKCwyzCbLF3I-F0Ew) |
+| **Firmware with Root + Optimizations** | **Recommended:** Complete debloat, PRHub v0.5, calibrated picture/audio & hardened security.<br>• **SHA-256:** `ef232c8f65fc118aeee4213eab41b9b833f9c0692e953ccaf3bd262dae1df1d9` | [Download from MEGA](https://mega.nz/folder/dMYElIqY#NARE4DKCwyzCbLF3I-F0Ew) |
 | **Drivers**| **drivers.zip** Contains the official Amlogic USB burning mode drivers. Make sure to install them if your PC does not recognize the device when putting it into flashing mode. | [Download from MEGA](https://mega.nz/folder/dMYElIqY#NARE4DKCwyzCbLF3I-F0Ew) |
 | **Flashing Utility** | OpenixSuit (Modern open-source flashing tool for Allwinner SoCs) | [OpenixSuit GitHub](https://github.com/YuzukiTsuru/OpenixSuit) |
 
@@ -178,7 +178,7 @@
 * **zRAM Memory:** LZ4 compression, `swappiness = 60`, `vfs_cache_pressure = 50` ➔ stable multitasking without unexpected background app termination.
 * **eMMC Storage Read:** `read_ahead_kb` increased from 128 KB to 512 KB ➔ faster app launch times.
 * **Window Animations:** Scaled down to 0.5x ➔ 2x snappier interface responsiveness.
-* **Developer Utilities:** Developer Options, USB Debugging, and ADB TCP/IP (port 5555) active out of the box.
+* **System Security & Hardening:** ADB over TCP/IP (port 5555) completely closed, adbd daemon stopped on boot, and `ro.adb.secure=1` enforced to eliminate unauthorized remote LAN access.
 
 ---
 
