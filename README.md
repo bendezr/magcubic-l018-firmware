@@ -2,7 +2,7 @@
 
 `Allwinner H726` • `Android 14 TV` • `1GB RAM / 16GB ROM` • `Build: l018_26110101.img`
 
-> High-performance, debloated custom firmware and flashing guide for the **Magcubic L018** projector. Resolves critical RAM starvation (boosting free memory from ~20 MB to ~300 MB), eliminates adware/telemetry, and adds the custom **PRHub** controller with calibrated picture and audio profiles.
+> High-performance, debloated custom firmware and flashing guide for the **Magcubic L018** projector. Resolves critical RAM starvation (boosting free memory from ~20 MB to ~300 MB), eliminates adware/telemetry, and adds the custom **PRHub** controller with calibrated picture and audio profiles, shortcut to android settings, factory menu.
 
 ---
 
@@ -19,7 +19,7 @@
   </tr>
   <tr>
     <td align="center"><em>Streamlined desktop with SmartTube, Nova, LocalSend & Aurora Store</em></td>
-    <td align="center"><em>Proprietary system hub v0.5: 8-tile grid, Katniss toggle for extra RAM & telemetry HUD</em></td>
+    <td align="center"><em>PRHub v0.5: 8-tile grid, Katniss toggle for extra RAM & telemetry HUD</em></td>
   </tr>
 </table>
 
@@ -37,9 +37,9 @@
 
 > [!TIP]
 > **New PRHub v0.5 APK is now bundled directly in this repo!**  
-> If you already have stock or custom firmware installed, you can simply download **[`prhub.apk`](prhub.apk)**, copy it to a USB flash drive, and install it with the built-in file manager — **no PC, no root, and no ADB required** (pre-signed with Allwinner system UID 1000).  
+> If you already have previous version custom firmware installed, you can simply download **[`prhub.apk`](prhub.apk)**, copy it to a USB flash drive, and install it with the built-in file manager.
 > **Key v0.5 features:**  
-> - **Katniss (Google Assistant) Toggle:** Turn off Katniss to shut down background mic listeners and **free up an additional ~80–100 MB of RAM** for smoother 1080p playback.  
+> - **Katniss (Google Assistant) Toggle:** Turn off Katniss to shut down background mic listeners and **free up an additional ~80–100 MB of RAM** for smoother playback.  
 > - **Enhanced Telemetry HUD:** Live overlay in the top-right corner displaying real-time CPU temperature, clock frequency, RAM, and LED status.
 
 ---
@@ -116,7 +116,7 @@
 
 ---
 
-### 3. 🎛️ Proprietary System Controller: PRHub v0.5 (`com.projector.prhub`, UID 1000)
+### 3. 🎛️ Proprietary System Controller: PRHub v0.5.
 * **Real-Time RAM Monitor:** Live kernel-level reading from `/proc/meminfo` displayed in the header — shows real memory reserves (~300 MB free vs stock 20–30 MB).
 * **Expanded 8-Tile Symmetrical Grid (4×2) [NEW in v0.5]:**
   - **Tile 1 (Projector Settings):** Digital zoom, orientation flipping (ceiling/mirror), and electronic focus adjustment.
