@@ -1,6 +1,6 @@
 # Magcubic L018 – Custom Firmware & Optimization Guide
 
-`Allwinner H726` • `Android 14 TV` • `1GB RAM / 16GB ROM` • `Build: l018_26110101.img`
+`Allwinner H726` • `Android 14 TV` • `1GB RAM / 16GB ROM` • `Build: l018_26110701.img`
 
 > High-performance, debloated custom firmware and flashing guide for the **Magcubic L018** projector. Resolves critical RAM starvation (boosting free memory from ~20 MB to ~300 MB), eliminates adware/telemetry, and adds the custom **PRHub** controller with calibrated picture and audio profiles, shortcut to android settings, factory menu.
 
@@ -70,7 +70,7 @@
 
 ---
 
-## 🛠️ Complete Technical Changelog (`Build: l018_26110101.img`)
+## 🛠️ Complete Technical Changelog (`Build: l018_26110701.img`)
 
 ### 1. 🧹 Deep Debloat & RAM Balance (Stock: 20–30 MB ➔ **Now: ~300 MB Free RAM**)
 * **RAM Reserve:** Stock firmware booted with a critically low 20–30 MB of free memory, causing aggressive low-memory-killer (LMKD) app terminations and video stuttering. Following comprehensive debloating and optimizations, the projector consistently maintains **~300 MB of free RAM** (>30% of total physical memory reserved for video buffers and smooth UI).
