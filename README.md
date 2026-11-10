@@ -1,8 +1,8 @@
 # Magcubic L018 – Custom Firmware & Optimization Guide
 
-`Allwinner H726` • `Android 14 TV` • `1GB RAM / 16GB ROM` • `Build: l018_26111001.img`
+`Allwinner H726` • `Android 14 TV` • `1GB RAM / 16GB ROM` • `Build: l018_26111002.img`
 
-> High-performance, debloated custom firmware and flashing guide for the **Magcubic L018** projector. Resolves critical RAM starvation (boosting free memory from ~20 MB to ~300 MB), eliminates adware/telemetry, and adds the custom **PRHub** controller with calibrated picture and audio profiles, shortcut to android settings, factory menu.
+> High-performance, debloated custom firmware and flashing guide for the **Magcubic L018** projector. Resolves critical RAM starvation (boosting free memory from ~20 MB to ~430 MB with Assistant disabled by default), eliminates adware/telemetry, and adds the custom **PRHub v0.6.1** controller with calibrated picture and audio profiles, shortcut to android settings, factory menu.
 
 ---
 
@@ -19,7 +19,7 @@
   </tr>
   <tr>
     <td align="center"><em>Streamlined desktop with SmartTube, Nova, LocalSend & Aurora Store</em></td>
-    <td align="center"><em>PRHub v0.6: 8-tile grid, Katniss assistant toggle, fixed HUD lifecycle & RAM cleaner</em></td>
+    <td align="center"><em>PRHub v0.6.1: 8-tile grid, Katniss assistant toggle (default OFF for +130MB RAM), Clean & Exit fix & fixed HUD</em></td>
   </tr>
 </table>
 
@@ -29,19 +29,11 @@
 
 | Item | Description | Direct Link |
 | :--- | :--- | :--- |
-| **PRHub v0.6 APK** | **NEW:** Standalone system controller APK (fixed HUD lifecycle, Clean & Exit fix, frees extra RAM) | **[Download prhub.apk](prhub.apk)** |
+| **PRHub v0.6.1 APK** | **NEW:** Standalone system controller APK (fixed Clean & Exit not killing Katniss, instant memory cleaning, Katniss ON/OFF toggle) | **[Download prhub.apk](prhub.apk)** |
 | **Firmware with Root** | Cleaned stock system with pre-configured Root access | [Download from MEGA](https://mega.nz/folder/yYtCTaKR#1SRV57eHmnI-LdXAofpewQ) |
-| **Firmware with Root + Optimizations** | **Recommended:** Complete debloat, PRHub v0.6, calibrated picture/audio, OEM Magisk preinstall & hardened security.<br>• **SHA-256:** `325f5f94941e8bbc8e98fe98e7916670660f24cad64ed25626063606cc9bd66e` | [Download from MEGA](https://mega.nz/folder/dMYElIqY#NARE4DKCwyzCbLF3I-F0Ew) |
+| **Firmware with Root + Optimizations** | **Recommended:** Complete debloat, PRHub v0.6.1, calibrated picture/audio, OEM Magisk preinstall, Katniss default OFF (~430MB free RAM).<br>• **SHA-256:** `a5d419791e53c5875d6fab83aad84cacf0dc7aa91501cafbaabe9d239c3408ce` | [Download from MEGA](https://mega.nz/folder/dMYElIqY#NARE4DKCwyzCbLF3I-F0Ew) |
 | **Drivers**| **drivers.zip** Contains the official Amlogic USB burning mode drivers. Make sure to install them if your PC does not recognize the device when putting it into flashing mode. | [Download from MEGA](https://mega.nz/folder/dMYElIqY#NARE4DKCwyzCbLF3I-F0Ew) |
 | **Flashing Utility** | OpenixSuit (Modern open-source flashing tool for Allwinner SoCs) | [OpenixSuit GitHub](https://github.com/YuzukiTsuru/OpenixSuit) |
-
-> [!TIP]
-> **New PRHub v0.6 APK is now bundled directly in this repo!**  
-> If you already have custom firmware installed, you can simply download **[`prhub.apk`](prhub.apk)**, copy it to a USB flash drive, and install it with the built-in file manager.
-> **Key v0.6 features:**  
-> - **Resolved HUD Desktop Reappearance:** Added immediate `onPause()` teardown and `START_NOT_STICKY` service flag so HUD strictly obeys the "PRHUB ONLY" mode.
-> - **Fixed Clean & Exit Crash:** Fixed runtime shell execution so memory cleaning and return to home screen execute seamlessly without crash loops.
-> - **OEM Magisk Preinstall:** Magisk moved out of `/product/app/` into `/system/preinstall/`, installing cleanly as a genuine user app without "Abnormal State" errors.
 
 ---
 
@@ -71,7 +63,7 @@
 
 ---
 
-## 🛠️ Complete Technical Changelog (`Build: l018_26111001.img`)
+## 🛠️ Complete Technical Changelog (`Build: l018_26111002.img`)
 
 ### 1. 🧹 Deep Debloat & RAM Balance (Stock: 20–30 MB ➔ **Now: ~300 MB Free RAM**)
 * **RAM Reserve:** Stock firmware booted with a critically low 20–30 MB of free memory, causing aggressive low-memory-killer (LMKD) app terminations and video stuttering. Following comprehensive debloating and optimizations, the projector consistently maintains **~300 MB of free RAM** (>30% of total physical memory reserved for video buffers and smooth UI).
