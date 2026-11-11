@@ -1,6 +1,6 @@
 # Magcubic L018 – Custom Firmware & Optimization Guide
 
-`Allwinner H726` • `Android 14 TV` • `1GB RAM / 16GB ROM` • `Build: l018_26111002.img`
+`Allwinner H726` • `Android 14 TV` • `1GB RAM / 16GB ROM` • `Build: l018_26111102.img`
 
 > High-performance, debloated custom firmware and flashing guide for the **Magcubic L018** projector. Resolves critical RAM starvation (boosting free memory from ~20 MB to ~430 MB with Assistant disabled by default), eliminates adware/telemetry, and adds the custom **PRHub v0.6.1** controller with calibrated picture and audio profiles, shortcut to android settings, factory menu.
 
@@ -18,7 +18,7 @@
     <td valign="top"><img src="assets/prhub_dashboard_v5.jpg" width="100%" alt="PRHub Dashboard"></td>
   </tr>
   <tr>
-    <td align="center"><em>Streamlined desktop with SmartTube, Nova, LocalSend & Aurora Store</em></td>
+    <td align="center"><em>Streamlined desktop with SmartTube, Nova, LocalSend & Aptoide TV</em></td>
     <td align="center"><em>PRHub v0.6.1: 8-tile grid, Katniss assistant toggle (default OFF for +130MB RAM), Clean & Exit fix & fixed HUD</em></td>
   </tr>
 </table>
@@ -31,7 +31,7 @@
 | :--- | :--- | :--- |
 | **PRHub v0.6.1 APK** | **NEW:** Standalone system controller APK (fixed Clean & Exit not killing Katniss, instant memory cleaning, Katniss ON/OFF toggle) | **[Download prhub.apk](prhub.apk)** |
 | **Firmware with Root** | Cleaned stock system with pre-configured Root access | [Download from MEGA](https://mega.nz/folder/yYtCTaKR#1SRV57eHmnI-LdXAofpewQ) |
-| **Firmware with Root + Optimizations** | **Recommended:** Complete debloat, PRHub v0.6.1, calibrated picture/audio, OEM Magisk preinstall, Katniss default OFF (~430MB free RAM).<br>• **SHA-256:** `a5d419791e53c5875d6fab83aad84cacf0dc7aa91501cafbaabe9d239c3408ce` | [Download from MEGA](https://mega.nz/folder/dMYElIqY#NARE4DKCwyzCbLF3I-F0Ew) |
+| **Firmware with Root + Optimizations** | **Recommended:** Complete debloat, PRHub v0.6.1, calibrated picture/audio (Standard/Vivid/Custom Sharpness 50, Cinema 45, Custom Saturation 50), OEM Magisk preinstall, Katniss default OFF (~430MB free RAM).<br>• **SHA-256:** `1303455d3cf50dd68a11f2bb3b6b6764ae83125d637f63f16ff7b588f9e367f8` | [Download from MEGA](https://mega.nz/folder/dMYElIqY#NARE4DKCwyzCbLF3I-F0Ew) |
 | **Drivers**| **drivers.zip** Contains the official Amlogic USB burning mode drivers. Make sure to install them if your PC does not recognize the device when putting it into flashing mode. | [Download from MEGA](https://mega.nz/folder/dMYElIqY#NARE4DKCwyzCbLF3I-F0Ew) |
 | **Flashing Utility** | OpenixSuit (Modern open-source flashing tool for Allwinner SoCs) | [OpenixSuit GitHub](https://github.com/YuzukiTsuru/OpenixSuit) |
 
@@ -63,7 +63,7 @@
 
 ---
 
-## 🛠️ Complete Technical Changelog (`Build: l018_26111002.img`)
+## 🛠️ Complete Technical Changelog (`Build: l018_26111102.img`)
 
 ### 1. 🧹 Deep Debloat & RAM Balance (Stock: 20–30 MB ➔ **Now: ~300 MB Free RAM**)
 * **RAM Reserve:** Stock firmware booted with a critically low 20–30 MB of free memory, causing aggressive low-memory-killer (LMKD) app terminations and video stuttering. Following comprehensive debloating and optimizations, the projector consistently maintains **~300 MB of free RAM** (>30% of total physical memory reserved for video buffers and smooth UI).
@@ -97,9 +97,10 @@
 * **Fresh Desktop Application Tiles:**
   - **SmartTube:** Modern ad-free, sponsor-free YouTube client.
   - **Nova Video Player:** Primary video player for local USB drives and SMB home networks.
-  - **Aurora Store:** Official "Store" dock tile in crisp HD (replaces defunct Chinese store).
+  - **Aptoide TV:** Official "Store" dock tile in crisp HD (replaces defunct Chinese store, one-click install for TV apps).
   - **LocalSend:** Rapid Wi-Fi file and video transfer directly from smartphones and PCs.
   - **PRHub:** Projector quick settings hub (zoom, focus, HDMI, RAM cleaner).
+  - **Aurora Store:** Retained in system programs (`/product/app/AuroraStore/`) for full Google Play app catalogue access.
 * **Screen Casting & Mirroring Streamlined:**
   - Removed unstable Chinese services: `SameScreen`, Chinese `AirPlay`, and duplicate `DLNA`.
   - Implemented dedicated Miracast shortcut (`miracast_shortcut.apk`) routing directly to Allwinner's native hardware receiver (`com.softwinner.miracastReceiver`) for instant, stable wireless screen mirroring.
@@ -128,11 +129,13 @@
 * **DCI Disabled (`DCI_SETTINGS_ENABLE = 0`, `dci = "0"`):** Eliminates dynamic brightness pumping on dark-to-bright scene transitions.
 * **Black Extension & Pedestal Disabled (`BLACK_EXTENSION = 0`, `PEDESTAL = 0`):** Eliminates "Black Crush"; restores full shadow detail in dark movie scenes.
 * **TNR & SNR Disabled (`TNR = 0`, `SNR = 0`, `tnr = "0"`, `snr = "0"`):** Eliminates motion ghosting and smudged facial textures.
-* **Peaking Disabled (`SSR_PEAKING_ENBALE = 0`, `sharpness = 40`):** Eliminates artificial white ringing halos around high-contrast edges.
+* **Tuned Sharpness Profiles (`pq_picturemode.ini` & `pqcontrol_custom_setting.xml`):**
+  - **Standard / Vivid / Custom:** `sharpness = 50` (optimal clarity and edge definition without harsh artifacts)
+  - **Cinema:** `sharpness = 45` (subtle filmic softening for authentic cinematic presentation)
 * **SSR Enabled (`SSR_SETTINGS_GENERAL_SSR_ENABLE = 1`):** Clean hardware Super Resolution edge upscaling.
 * **Gamma 2.2 Curve (`gamma = "2"`, `GAMMA_SETTINGS_ENABLE = 1`):** Authentic cinematic contrast without washed-out greys.
 * **Full RGB Range (`video_range_mode = "1"`) + `CM_ENABLE = 1`:** Eliminates color banding on skies and subtle color gradients.
-* **Calibrated Factory Baselines:** Brightness 50, Contrast 50, Saturation 55, LED Backlight 100%.
+* **Calibrated Factory Baselines:** Brightness 50, Contrast 50, Saturation 50 (Custom), LED Backlight 100%.
 
 ---
 
@@ -180,7 +183,8 @@
   - Dedicated native 32-bit build (version 32.68).
   - Native shared libraries (`libj2v8.so`, `libcronet`, `libconscrypt`) extracted directly to `/product/app/SmartTube/lib/arm/`, fully resolving the *"j2v8 native library not loaded"* crash.
   - Pre-seeded configuration for Allwinner H726: VP9 1080p60 codec with 21.5 MB video buffer.
-* **Aurora Store (`com.aurora.store`):** Google Play Store client requiring no Google account login.
+* **Aptoide TV (`cm.aptoidetv.pt`):** Dedicated TV app store optimized for remote control navigation and fast TV app installation, directly linked to the main launcher tile.
+* **Aurora Store (`com.aurora.store`):** Full Google Play Store client requiring no Google account login, available in the application list.
 * **Nova Video Player (`org.courville.nova`):** Full Allwinner CedarX hardware decoding, USB/SMB network playback, auto-subtitles.
 * **LocalSend (`org.localsend.localsend_app`):** Wireless local network file sharing across mobile and desktop devices.
 * **Web Video Caster Receiver (`com.instantbits.cast.receiver`):** In-browser video streaming receiver.
